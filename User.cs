@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +8,8 @@ namespace hw11
 {
     internal class User
     {
-       
-        public string Name{ get; set; }
+
+        public string Name { get; set; }
         public string Surname { get; set; }
         public RegistrationMonth RegistrationMonth { get; set; }
 
@@ -17,38 +17,42 @@ namespace hw11
         {
             get
             {
-                if (pin.LenghtIs7())
                     return pin;
-                else
-                    throw new Exception("PIN length must be 7 and all letters must be CAPITALIZED");
             }
             set
             {
-                pin = value;
+                if (value.LenghtIs7())
+                {
+                    pin = value;
+                }
+                else
+                {
+                    throw new Exception("PIN length must be 7 and all letters must be CAPITALIZED");
+                }
             }
         }
 
         private string pin;
 
-        public User(string Name, string Surname, RegistrationMonth RegistrationMonth, string PIN) 
+        public User(string name, string surname, RegistrationMonth registrationMonth, string pin)
         {
-            this.Name = Name;
-            this.Surname = Surname;
-            this.RegistrationMonth = RegistrationMonth;
-            this.PIN = PIN;
-            
+            Name = name;
+            Surname = surname;
+            RegistrationMonth = registrationMonth;
+            PIN = pin;
+
         }
 
         public void GetDetails()
         {
-            Console.WriteLine($"{Name}, {Surname}, {RegistrationMonth}, {PIN}");
+            Console.WriteLine($"{Name}, {Surname}, {RegistrationMonth}, {pin}");
         }
 
-       
+
 
     }
-    public enum RegistrationMonth 
-    {   
+    public enum RegistrationMonth
+    {
         January = 1,
         February,
         March,
@@ -63,12 +67,12 @@ namespace hw11
         December
     }
 
-    
-    
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
 }
