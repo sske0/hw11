@@ -10,7 +10,7 @@ namespace hw11
     {
         public static bool LenghtIs7(this string pin)
         {
-            if (pin.Length == 7 && PIN.ToUpper() == pin)
+            if (pin.Length == 7 && pin.ToUpper() == pin)
                 return true;
 
             else
