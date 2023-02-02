@@ -20,7 +20,7 @@ namespace hw11
                 if (pin.LenghtIs7())
                     return pin;
                 else
-                    throw new Exception("PIN lenght must be 7 and all letters must be CAPITALIZED");
+                    throw new Exception("PIN length must be 7 and all letters must be CAPITALIZED");
             }
             set
             {
