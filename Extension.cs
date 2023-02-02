@@ -8,9 +8,9 @@ namespace hw11
 {
     internal static class Extension
     {
-        public static bool LenghtIs7(this string PIN)
+        public static bool LenghtIs7(this string pin)
         {
-            if (PIN.Length == 7 && PIN.ToUpper() == PIN)
+            if (pin.Length == 7 && PIN.ToUpper() == pin)
                 return true;
 
             else
